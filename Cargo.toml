@@ -1,0 +1,20 @@
+[package]
+name = "my_first_plugin"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+bench = false
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+serde = "1"
+swc_plugin = "0.71.0"
+swc_common = "0.20.2"
+
+[dev-dependencies]
+swc_ecma_transforms_testing="0.96.0"
+swc_ecma_parser="0.108.1"
+swc_ecma_visit="0.67.1"
+swc_ecma_ast="0.81.0"
+testing="*"
