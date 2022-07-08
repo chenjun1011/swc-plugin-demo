@@ -4,10 +4,14 @@
     "description": "",
     "author": "",
     "license": "ISC",
-    "keywords": ["swc-plugin"],
+    "keywords": [
+        "swc-plugin"
+    ],
     "main": "target/wasm32-wasi/release/my-first-plugin.wasm",
     "scripts": {
-        "prepublishOnly": "cargo build --release"
+        "prepublishOnly": "cargo prepublish --release && cp target/wasm32-wasi/release/your_plugin_name.wasm ."
     },
-    "files": []
+    "files": [
+        "target"
+    ]
 }
